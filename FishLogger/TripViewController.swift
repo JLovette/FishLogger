@@ -56,7 +56,11 @@ extension TripViewController: UITableViewDataSource {
                 cell.tripDateLabel.text = dateString
                 
             }
-            
+            //let image : UIImage = UIImage(named:"defaultStream")!
+            print("I found image")
+            //cell.tripImage = UIImageView(image: image)
+            cell.tripImage.image = UIImage(named: ("defaultStream"))
+
             
             if let fishCaught = trip.value(forKey: "fishCaught") as? Int16 {
                 cell.tripFishCaught.text = String(fishCaught)

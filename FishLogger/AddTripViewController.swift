@@ -11,6 +11,7 @@ import CoreData
 
 class AddTripViewController: UIViewController {
 
+    @IBOutlet weak var streamPicker: UIPickerView!
     @IBOutlet weak var tripNameTextField: UITextField!
     @IBOutlet weak var tripDatePicker: UIDatePicker!
     @IBOutlet weak var stepper: UIStepper!

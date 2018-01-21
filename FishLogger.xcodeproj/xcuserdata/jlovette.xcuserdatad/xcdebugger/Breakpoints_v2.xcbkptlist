@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FishLogger/TripTableViewCell.swift"
-            timestampString = "538006857.010633"
+            timestampString = "538039160.1479729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
             endingLineNumber = "15"
-            landmarkName = "TripTableViewCell"
-            landmarkType = "3">
+            landmarkName = "unknown"
+            landmarkType = "0">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -104,43 +104,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FishLogger/TripTableViewCell.swift"
-            timestampString = "538006857.0107059"
+            timestampString = "538039160.148029"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
             endingLineNumber = "14"
-            landmarkName = "TripTableViewCell"
-            landmarkType = "3">
+            landmarkName = "unknown"
+            landmarkType = "0">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "FishLogger.TripTableViewCell.tripNameLabel.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  symbolName = "FishLogger.TripTableViewCell.tripNameLabel.getter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
                   moduleName = "FishLogger"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jlovette/Desktop/FishLogger/FishLogger/TripTableViewCell.swift"
-                  timestampString = "537994264.309579"
+                  timestampString = "538038612.7138439"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "79">
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "109">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "FishLogger.TripTableViewCell.tripNameLabel.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  symbolName = "FishLogger.TripTableViewCell.tripNameLabel.setter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
                   moduleName = "FishLogger"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jlovette/Desktop/FishLogger/FishLogger/TripTableViewCell.swift"
-                  timestampString = "537994264.312113"
+                  timestampString = "538038612.715668"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "86">
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "112">
                </Location>
                <Location
                   shouldBeEnabled = "No"
@@ -150,12 +150,12 @@
                   moduleName = "FishLogger"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jlovette/Desktop/FishLogger/FishLogger/TripTableViewCell.swift"
-                  timestampString = "537994264.313834"
+                  timestampString = "538038612.718467"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "80">
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "233">
                </Location>
                <Location
                   shouldBeEnabled = "No"
@@ -165,12 +165,12 @@
                   moduleName = "FishLogger"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jlovette/Desktop/FishLogger/FishLogger/TripTableViewCell.swift"
-                  timestampString = "537994264.315341"
+                  timestampString = "538038612.720861"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "46">
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "156">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -182,7 +182,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FishLogger/TripViewController.swift"
-            timestampString = "538006857.010764"
+            timestampString = "538257315.022849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
