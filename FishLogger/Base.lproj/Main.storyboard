@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -115,13 +114,14 @@
         <!--Add Trip-->
         <scene sceneID="lmN-2g-7T2">
             <objects>
-                <viewController title="Add Trip" hidesBottomBarWhenPushed="YES" id="GCg-Fj-4k5" customClass="AddTripViewController" customModule="FishLogger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addTrip" title="Add Trip" hidesBottomBarWhenPushed="YES" id="GCg-Fj-4k5" customClass="AddTripViewController" customModule="FishLogger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pT5-XG-inz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Trip Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z7j-QT-e5s">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Trip Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z7j-QT-e5s">
                                 <rect key="frame" x="16" y="126" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -154,20 +154,17 @@
                                     <action selector="stepperValueChanged:" destination="GCg-Fj-4k5" eventType="valueChanged" id="nwY-OU-S6I"/>
                                 </connections>
                             </stepper>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gH-yO-rZq">
-                                <rect key="frame" x="38" y="617" width="92" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noPhotoSelected" translatesAutoresizingMaskIntoConstraints="NO" id="XTb-K1-gmz">
+                                <rect key="frame" x="67" y="435" width="240" height="212"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Photo"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <segue destination="3Q8-6o-bRE" kind="show" id="b7v-X7-anu"/>
+                                    <outletCollection property="gestureRecognizers" destination="2tF-MH-7I0" appends="YES" id="7vA-yT-AvR"/>
                                 </connections>
-                            </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hor-hM-Qtq">
-                                <rect key="frame" x="0.0" y="462" width="375" height="115"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W62-ax-HBR">
-                                <rect key="frame" x="289" y="617" width="46" height="30"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W62-ax-HBR">
+                                <rect key="frame" x="313" y="617" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="addTrip" destination="GCg-Fj-4k5" eventType="touchUpInside" id="w2n-os-YbQ"/>
@@ -175,48 +172,28 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="W62-ax-HBR" secondAttribute="bottom" constant="20" symbolic="YES" id="73V-cr-HLM"/>
-                            <constraint firstItem="Z7j-QT-e5s" firstAttribute="trailing" secondItem="pT5-XG-inz" secondAttribute="trailingMargin" id="9p9-ak-hEF"/>
-                            <constraint firstItem="Z7j-QT-e5s" firstAttribute="leading" secondItem="pT5-XG-inz" secondAttribute="leadingMargin" id="UZB-BH-ZLw"/>
-                            <constraint firstItem="W62-ax-HBR" firstAttribute="leading" secondItem="LRs-OE-iQx" secondAttribute="leading" constant="164" id="fRg-bq-Mf8"/>
-                            <constraint firstItem="Z7j-QT-e5s" firstAttribute="top" secondItem="LRs-OE-iQx" secondAttribute="top" constant="10" id="kin-bW-5Lj"/>
-                            <constraint firstItem="Z7j-QT-e5s" firstAttribute="centerX" secondItem="W62-ax-HBR" secondAttribute="centerX" id="pSV-NX-Wja"/>
-                        </constraints>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="LRs-OE-iQx"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="2tF-MH-7I0" appends="YES" id="xyy-ul-DAm"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="fishCaught" destination="eiT-SW-68u" id="1Id-06-yjm"/>
+                        <outlet property="imagePicker" destination="XTb-K1-gmz" id="GIS-Nc-IdV"/>
                         <outlet property="stepper" destination="Kea-X4-5lf" id="vP7-Xe-Nuo"/>
-                        <outlet property="streamPicker" destination="hor-hM-Qtq" id="5Jy-gU-e5w"/>
                         <outlet property="tripDatePicker" destination="6aW-cL-tDj" id="P7B-ve-hNa"/>
                         <outlet property="tripNameTextField" destination="Z7j-QT-e5s" id="kS6-SL-Q0r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6s-xy-VE0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2tF-MH-7I0">
+                    <connections>
+                        <action selector="selectPhotoFromImageLibrary:" destination="GCg-Fj-4k5" id="stK-rU-3qe"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2223.1999999999998" y="106.59670164917542"/>
-        </scene>
-        <!--Add Photo to Trip-->
-        <scene sceneID="7Oy-6s-XsZ">
-            <objects>
-                <viewController title="Add Photo to Trip" hidesBottomBarWhenPushed="YES" id="3Q8-6o-bRE" customClass="PhotoSelectionController" customModule="FishLogger" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9eU-AO-uJv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noPhotoSelected" translatesAutoresizingMaskIntoConstraints="NO" id="fhm-IL-Rgo">
-                                <rect key="frame" x="16" y="162" width="343" height="343"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Vbw-kN-mcM"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cnX-xr-Vzg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3040.8000000000002" y="96.7016491754123"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="f0l-Ax-PoQ">

@@ -17,7 +17,6 @@
 		58B98CEB200FEDD200198D14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58B98CE9200FEDD200198D14 /* LaunchScreen.storyboard */; };
 		58B98CF5200FF97300198D14 /* TripHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B98CF4200FF97300198D14 /* TripHandler.swift */; };
 		58B98CF7201004F500198D14 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B98CF6201004F500198D14 /* AddTripViewController.swift */; };
-		58C647822011CD030064D587 /* PhotoSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C647812011CD030064D587 /* PhotoSelectionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		58B98CEC200FEDD200198D14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58B98CF4200FF97300198D14 /* TripHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripHandler.swift; sourceTree = "<group>"; };
 		58B98CF6201004F500198D14 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
-		58C647812011CD030064D587 /* PhotoSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +69,6 @@
 				580A951A201057BB003ACE27 /* TripTableViewCell.swift */,
 				58B98CF4200FF97300198D14 /* TripHandler.swift */,
 				58B98CE1200FEDD200198D14 /* Main.storyboard */,
-				58C647812011CD030064D587 /* PhotoSelectionController.swift */,
 				580A951C2011528F003ACE27 /* StatViewController.swift */,
 				58B98CF6201004F500198D14 /* AddTripViewController.swift */,
 				58B98CE7200FEDD200198D14 /* Assets.xcassets */,
@@ -159,7 +156,6 @@
 				580A951D2011528F003ACE27 /* StatViewController.swift in Sources */,
 				58B98CF5200FF97300198D14 /* TripHandler.swift in Sources */,
 				580A951B201057BB003ACE27 /* TripTableViewCell.swift in Sources */,
-				58C647822011CD030064D587 /* PhotoSelectionController.swift in Sources */,
 				58B98CE0200FEDD200198D14 /* TripViewController.swift in Sources */,
 				58B98CDE200FEDD200198D14 /* AppDelegate.swift in Sources */,
 			);

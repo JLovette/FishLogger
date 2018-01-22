@@ -17,6 +17,8 @@ class TripViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Used for fresh presentation during development
+        //TripHandler.deleteCoreData()
         self.title = "Trips"
     }
     
@@ -28,16 +30,13 @@ class TripViewController: UIViewController {
 
 
 extension TripViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView,
-                   numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let c = TripHandler.getAllTrips().count
-        print("There are \(c) trips")
         return c
     }
     
-    func tableView(_ tableView: UITableView,
-                   cellForRowAt indexPath: IndexPath)
-        -> UITableViewCell {            
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            
             let trip = TripHandler.getAllTrips()[indexPath.row]
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "TripViewCell") as! TripTableViewCell
@@ -46,26 +45,21 @@ extension TripViewController: UITableViewDataSource {
             }
             
             if let date = trip.value(forKey: "tripDate") as? NSDate {
-                //cell.tripDateLabel.text = String(describing: date)
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateStyle = .medium
                 dateFormatter.timeStyle = .none
                 
                 let dateString = dateFormatter.string(from: date as Date)
-                print(dateString)
                 cell.tripDateLabel.text = dateString
                 
             }
-            //let image : UIImage = UIImage(named:"defaultStream")!
-            print("I found image")
-            //cell.tripImage = UIImageView(image: image)
-            cell.tripImage.image = UIImage(named: ("defaultStream"))
-
-            
+            if let photo = trip.value(forKey: "tripImage") as? Data {
+                cell.tripImage.image = UIImage(data:photo,scale:1.0)
+            }
             if let fishCaught = trip.value(forKey: "fishCaught") as? Int16 {
                 cell.tripFishCaught.text = String(fishCaught)
             }
-            //print("Made it here")
+            
             return cell
             
             
