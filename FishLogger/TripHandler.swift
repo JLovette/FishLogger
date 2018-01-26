@@ -22,6 +22,8 @@ protocol FishTripHandler {
     static func getTotalCaught () -> Int
     
     static func deleteCoreData () -> ()
+    
+    static func tripCount () -> Int
 }
 
 
@@ -97,6 +99,10 @@ class TripHandler: FishTripHandler {
         } catch {
             print ("There was an error")
         }
+    }
+    
+    static func tripCount() -> Int {
+        return getAllTrips().count
     }
     
     

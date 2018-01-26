@@ -14,7 +14,7 @@
         <scene sceneID="hVv-Qv-iPT">
             <objects>
                 <navigationController id="Vn3-6x-wqZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Trips" id="Exc-Gk-5he"/>
+                    <tabBarItem key="tabBarItem" title="Trips" image="tabBarList" id="Exc-Gk-5he"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="qBO-7Y-fnS">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -254,7 +254,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8fY-WI-n2Q"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Stats" id="poH-t6-Gob"/>
+                    <tabBarItem key="tabBarItem" title="Stats" image="tabBarStats" id="poH-t6-Gob"/>
                     <connections>
                         <outlet property="totalFish" destination="Lar-QT-WTu" id="Hoe-1y-zV5"/>
                         <outlet property="tripCount" destination="HA3-2b-xIA" id="l9U-9J-Gfy"/>
@@ -267,5 +267,7 @@
     </scenes>
     <resources>
         <image name="noPhotoSelected" width="320" height="320"/>
+        <image name="tabBarList" width="15" height="15"/>
+        <image name="tabBarStats" width="15" height="15"/>
     </resources>
 </document>

@@ -31,14 +31,12 @@ class TripViewController: UIViewController {
 
 extension TripViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let c = TripHandler.getAllTrips().count
-        return c
+      return TripHandler.tripCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
             let trip = TripHandler.getAllTrips()[indexPath.row]
-            
             let cell = tableView.dequeueReusableCell(withIdentifier: "TripViewCell") as! TripTableViewCell
             if let name = trip.value(forKey: "tripName") as? String {
                 cell.tripNameLabel.text = name
