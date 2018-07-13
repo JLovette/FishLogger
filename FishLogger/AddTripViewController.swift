@@ -31,7 +31,6 @@ class AddTripViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func addTrip() {
-        
         guard let tripName = tripNameTextField.text else {
             return
         }

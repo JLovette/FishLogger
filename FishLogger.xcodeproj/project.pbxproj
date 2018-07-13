@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		580A951B201057BB003ACE27 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580A951A201057BB003ACE27 /* TripTableViewCell.swift */; };
 		580A951D2011528F003ACE27 /* StatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580A951C2011528F003ACE27 /* StatViewController.swift */; };
+		5827944720745873006F6975 /* StreamHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5827944620745873006F6975 /* StreamHandler.swift */; };
 		58B98CDE200FEDD200198D14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B98CDD200FEDD200198D14 /* AppDelegate.swift */; };
 		58B98CE0200FEDD200198D14 /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B98CDF200FEDD200198D14 /* TripViewController.swift */; };
 		58B98CE3200FEDD200198D14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58B98CE1200FEDD200198D14 /* Main.storyboard */; };
@@ -17,11 +18,15 @@
 		58B98CEB200FEDD200198D14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58B98CE9200FEDD200198D14 /* LaunchScreen.storyboard */; };
 		58B98CF5200FF97300198D14 /* TripHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B98CF4200FF97300198D14 /* TripHandler.swift */; };
 		58B98CF7201004F500198D14 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B98CF6201004F500198D14 /* AddTripViewController.swift */; };
+		58F240E020F920F7005A97B9 /* StreamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F240DF20F920F7005A97B9 /* StreamTableViewCell.swift */; };
+		58F240E220F9222F005A97B9 /* StreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F240E120F9222F005A97B9 /* StreamViewController.swift */; };
+		58F240E420F930ED005A97B9 /* SelectStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F240E320F930ED005A97B9 /* SelectStream.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		580A951A201057BB003ACE27 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
 		580A951C2011528F003ACE27 /* StatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatViewController.swift; sourceTree = "<group>"; };
+		5827944620745873006F6975 /* StreamHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamHandler.swift; sourceTree = "<group>"; };
 		58B98CDA200FEDD200198D14 /* FishLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FishLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58B98CDD200FEDD200198D14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58B98CDF200FEDD200198D14 /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +37,9 @@
 		58B98CEC200FEDD200198D14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58B98CF4200FF97300198D14 /* TripHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripHandler.swift; sourceTree = "<group>"; };
 		58B98CF6201004F500198D14 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
+		58F240DF20F920F7005A97B9 /* StreamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamTableViewCell.swift; sourceTree = "<group>"; };
+		58F240E120F9222F005A97B9 /* StreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
+		58F240E320F930ED005A97B9 /* SelectStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectStream.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +74,13 @@
 			children = (
 				58B98CDD200FEDD200198D14 /* AppDelegate.swift */,
 				58B98CDF200FEDD200198D14 /* TripViewController.swift */,
+				58F240E120F9222F005A97B9 /* StreamViewController.swift */,
 				580A951A201057BB003ACE27 /* TripTableViewCell.swift */,
+				58F240DF20F920F7005A97B9 /* StreamTableViewCell.swift */,
 				58B98CF4200FF97300198D14 /* TripHandler.swift */,
+				5827944620745873006F6975 /* StreamHandler.swift */,
 				58B98CE1200FEDD200198D14 /* Main.storyboard */,
+				58F240E320F930ED005A97B9 /* SelectStream.swift */,
 				580A951C2011528F003ACE27 /* StatViewController.swift */,
 				58B98CF6201004F500198D14 /* AddTripViewController.swift */,
 				58B98CE7200FEDD200198D14 /* Assets.xcassets */,
@@ -151,11 +163,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5827944720745873006F6975 /* StreamHandler.swift in Sources */,
 				58B98CF7201004F500198D14 /* AddTripViewController.swift in Sources */,
+				58F240E420F930ED005A97B9 /* SelectStream.swift in Sources */,
 				58B98CE6200FEDD200198D14 /* FishLogger.xcdatamodeld in Sources */,
 				580A951D2011528F003ACE27 /* StatViewController.swift in Sources */,
 				58B98CF5200FF97300198D14 /* TripHandler.swift in Sources */,
+				58F240E220F9222F005A97B9 /* StreamViewController.swift in Sources */,
 				580A951B201057BB003ACE27 /* TripTableViewCell.swift in Sources */,
+				58F240E020F920F7005A97B9 /* StreamTableViewCell.swift in Sources */,
 				58B98CE0200FEDD200198D14 /* TripViewController.swift in Sources */,
 				58B98CDE200FEDD200198D14 /* AppDelegate.swift in Sources */,
 			);

@@ -51,21 +51,17 @@ class TripHandler: FishTripHandler {
     
     static func createTrip(fishCaught: Int, date: NSDate, tripName: String, tripImage: UIImage) {
         let entity = NSEntityDescription.entity(forEntityName: tripEntityName, in: managedContext)!
-        
         let trip = NSManagedObject(entity: entity, insertInto: managedContext) as! Trip
         trip.fishCaught = Int16(fishCaught)
         trip.tripDate = date as Date
         trip.tripName = tripName
         trip.tripImage = UIImageJPEGRepresentation(tripImage, 1);
-        
-        
         do {
             try managedContext.save()
             print("Saved succeeded")
         } catch {
             print("Saved failed")
         }
-        
 
         // todo
     }
