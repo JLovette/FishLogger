@@ -197,13 +197,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FishLogger/SelectStream.swift"
-            timestampString = "553205576.376442"
+            filePath = "FishLogger/StreamHandler.swift"
+            timestampString = "553318869.328333"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "findFlow()"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "findFlow(urlRequest:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

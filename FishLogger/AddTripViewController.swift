@@ -34,13 +34,16 @@ class AddTripViewController: UIViewController, UIImagePickerControllerDelegate, 
         guard let tripName = tripNameTextField.text else {
             return
         }
+        let tripFlow = "functionality in progress"
+        StreamHandler.pleaseWork(id: 04234000)
+       // let tripFlow = StreamHandler.findFlow(id: 004050, completion: (result: String) -> Void)
         guard tripName != "" else {
             return
         }
         guard let tripDate = tripDatePicker.date as NSDate! else {
             return
         }
-        TripHandler.createTrip(fishCaught: Int(stepper.value), date: tripDate, tripName: tripName, tripImage: imagePicker.image!)
+        TripHandler.createTrip(fishCaught: Int(stepper.value), date: tripDate, tripName: tripName, tripImage: imagePicker.image!, flow: tripFlow)
         tripNameTextField.text = ""
         
         self.navigationController?.popViewController(animated: true)

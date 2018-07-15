@@ -17,11 +17,13 @@ protocol FishStreamHandler {
     
     static func streamCount () -> Int
     
-    static func getFlow (stream: Stream) -> Int16
+   //  func findFlow (id:Int16, completion: @escaping (String) -> ())
+    
 }
 
 
 class StreamHandler: FishStreamHandler {
+  
     
     // 1
     static let managedContext =
@@ -62,10 +64,57 @@ class StreamHandler: FishStreamHandler {
         return getAllStreams().count
     }
     
-    static func getFlow (stream:Stream) -> Int16 {
-        return 0
+    
+    static func pleaseWork(id:Int64) {
+        let usgsQuery: String = "http://waterservices.usgs.gov/nwis/iv/?format=json&sites=\(id)&parameterCd=00060,00065&siteStatus=all"
+        guard let targetURL = URL(string: usgsQuery) else {
+            print("Error: cannot create URL")
+            return
+        }
+        let request = URLRequest(url: targetURL)
+        findFlow(urlRequest: request) {
+            success in
+            let flow = success
+            print("It found some semblance of a stream flow")
+            print(flow)
+        }
     }
     
+    static func findFlow(urlRequest:URLRequest, completionHandler: @escaping (String) -> Void) {
+        let session = URLSession.shared
+        let task = session.dataTask(with: urlRequest) {
+           // (data:Data?, response: URLResponse?, error: Error?) in
+           (data, response, error) in
+            // check for any errors
+            guard error == nil else {
+                print("error calling GET")
+                print(error!)
+                return
+            }
+            // make sure we got data
+            guard let responseData = data else {
+                print("Error: did not receive data")
+                return
+            }
+            print("got here")
+            print(responseData.description)
+            // parse the result as JSON, since that's what the API provides
+            do {
+                let response = try JSONSerialization.jsonObject(with: responseData, options: []) as? Dictionary<String, Any>
+                let valueDict = response!["value"] as! [String:AnyObject]
+                let timeSeries = valueDict["timeSeries"] as! Array<AnyObject>
+                let index = timeSeries[0] as! [String:AnyObject]
+                let omgTheUSGSIsBadAtCoding = index["variable"] as! [String:AnyObject]
+                let success = omgTheUSGSIsBadAtCoding["variableName"] as! String
+                print(success)
+                completionHandler(success)
+            } catch  {
+                print("error trying to convert data to JSON")
+                return
+            }
+        }
+        task.resume()
+    }
     
 }
 
