@@ -13,7 +13,7 @@ import CoreData
 protocol FishTripHandler {
     static func getAllTrips () -> [Trip]
     
-    static func createTrip (fishCaught: Int, date: NSDate, tripName: String, tripImage: UIImage, flow: String) -> ()
+    static func createTrip (fishCaught: Int, date: NSDate, tripName: String, tripImage: UIImage) -> ()
     
     static func getTripsByDate (date: NSDate) -> [Trip]
     
@@ -49,14 +49,14 @@ class TripHandler: FishTripHandler {
 //        return []
     }
     
-    static func createTrip(fishCaught: Int, date: NSDate, tripName: String, tripImage: UIImage, flow:String) {
+    static func createTrip(fishCaught: Int, date: NSDate, tripName: String, tripImage: UIImage) {
         let entity = NSEntityDescription.entity(forEntityName: tripEntityName, in: managedContext)!
         let trip = NSManagedObject(entity: entity, insertInto: managedContext) as! Trip
         trip.fishCaught = Int16(fishCaught)
         trip.tripDate = date as Date
         trip.tripName = tripName
         trip.tripImage = UIImageJPEGRepresentation(tripImage, 1)
-        trip.flow = flow;
+        //trip.flow = flow;
         do {
             try managedContext.save()
             print("Saved succeeded")

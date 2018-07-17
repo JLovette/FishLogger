@@ -309,31 +309,44 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uB-7Y-51G">
-                                <rect key="frame" x="166" y="189" width="42" height="21"/>
+                                <rect key="frame" x="166" y="400" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Pf-hE-GDP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="kBL-LK-bVc"/>
+                                </constraints>
+                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7or-Eq-fmS">
-                                <rect key="frame" x="164" y="245" width="46" height="30"/>
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="findFlow" destination="QxD-ZU-stS" eventType="touchUpInside" id="waG-Nq-rrc"/>
+                                    <action selector="addStream" destination="QxD-ZU-stS" eventType="touchUpInside" id="OpQ-Ry-2J3"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Pf-hE-GDP" firstAttribute="trailing" secondItem="4Oi-mv-Gzn" secondAttribute="trailing" id="0rR-Me-i3z"/>
+                            <constraint firstItem="4Pf-hE-GDP" firstAttribute="leading" secondItem="4Oi-mv-Gzn" secondAttribute="leading" id="Ctn-5V-ZpE"/>
+                            <constraint firstItem="4Pf-hE-GDP" firstAttribute="top" secondItem="4Oi-mv-Gzn" secondAttribute="top" id="OuS-WC-qYL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4Oi-mv-Gzn"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Wpf-cr-jpX"/>
                     <connections>
+                        <outlet property="pickerView" destination="4Pf-hE-GDP" id="xH5-Ai-yxL"/>
                         <outlet property="streamFlow" destination="7uB-7Y-51G" id="GFg-uv-92g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKK-Da-LPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1307" y="1878"/>
+            <point key="canvasLocation" x="-1308" y="1877.8110944527737"/>
         </scene>
         <!--Streams-->
         <scene sceneID="cHv-mH-d5Z">
